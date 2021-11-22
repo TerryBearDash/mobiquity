@@ -1,0 +1,232 @@
+.light {
+    .result-card {
+        background-color: #ccc;
+        transition: all ease-in-out 0.3s;
+        .result-card-overlay {
+            background-image: linear-gradient(45deg, #ccc, rgba(255, 255, 255, 0.6));
+            transition: all ease-in-out 0.3s;
+        }
+        .result-card-content {
+            color: #858080;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+    &.al-main-container {
+        background-color: #fff;
+        transition: all ease-in-out 0.3s;
+    }
+    .description-par {
+        color: #cbcbcb;
+    }
+    .switch-bg {
+        left: 0;
+        right: 30px;
+        background-color: #ccc;
+    }
+    .span-light {
+        color: #333;
+    }
+    .span-dark {
+        color: #333;
+    }
+    .bubble-link {
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #ccc;
+        &:hover {
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #333;
+        }
+        &:focus,
+        &.active {
+            color: #fff;
+            background-color: #333;
+            border: 1px solid #333;
+        }
+    }
+    .display-3 {
+        color: #cbcbcb;
+        transition: all ease-in-out 0.3s;
+    }
+}
+
+.dark {
+    .result-card {
+        background-color: #121212;
+        transition: all ease-in-out 0.3s;
+        .result-card-overlay {
+            background-image: linear-gradient(45deg, #000, rgba(0, 0, 0, 0.6));
+            transition: all ease-in-out 0.3s;
+        }
+        .result-card-content {
+            color: #555;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+    &.al-main-container {
+        background-color: #121212;
+        transition: all ease-in-out 0.3s;
+    }
+    .description-par {
+        color: #555;
+    }
+    .switch-bg {
+        left: 30px;
+        right: 0;
+        background-color: #333;
+    }
+    .span-light {
+        color: #fff;
+    }
+    .span-dark {
+        color: #fff;
+    }
+    .bubble-link {
+        border: 1px solid #333;
+        background-color: #121212;
+        color: #888;
+        &:hover {
+            color: #121212;
+            background-color: #ffaf18;
+            border: 1px solid #ffaf18;
+        }
+        &:focus,
+        &.active {
+            color: #121212;
+            background-color: #ffaf18;
+            border: 1px solid #ffaf18;
+        }
+    }
+    .display-3 {
+        color: #555;
+        transition: all ease-in-out 0.3s;
+    }
+}
+
+.al-main-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    padding: 30px 0 100px;
+    .center-logo {
+        max-width: 220px;
+        margin: 40px 0 20px;
+    }
+}
+
+.bubble-container {
+    width: 100%;
+    margin-top: 80px;
+    // max-width: 500px;
+    text-align: left;
+    .bubble-link {
+        display: inline-flex;
+        padding: 5px 20px;
+        height: 30px;
+        align-items: center;
+        font-size: 11px;
+        border-radius: 30px;
+        text-decoration: none;
+        margin: 0 10px 10px 0;
+        transition: all ease-in-out 0.3s;
+        &:hover {
+            text-decoration: none;
+            transition: all ease-in-out 0.3s;
+        }
+        &:focus {
+            text-decoration: none;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+}
+
+.swicth-container {
+    max-width: 60px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 30px;
+    position: relative;
+    span {
+        width: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        position: relative;
+        z-index: 2;
+        font-size: 11px;
+        cursor: pointer;
+    }
+    .switch-bg {
+        transition: all ease-in-out 0.3s;
+        border-radius: 30px;
+        height: 30px;
+        position: absolute;
+        z-index: 1;
+        width: 30px;
+    }
+}
+
+.description-par {
+    max-width: 480px;
+    font-weight: 100;
+    font-size: 30px;
+    margin: 40px 0;
+    display: block;
+}
+
+.result-card {
+    display: inline-flex;
+    max-width: 200px;
+    width: 100%;
+    height: 300px;
+    background-image: url('./assets/img/formula-1-logo-7.png');
+    background-position: center 50px;
+    background-size: 110px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    align-items: end;
+    margin: 0 10px 13px 0;
+    .result-card-overlay {
+        position: absolute;
+        z-index: 2;
+        background-image: linear-gradient(45deg, #000, transparent);
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .result-card-content {
+        padding: 20px;
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        .result-card-content-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .result-card-content-paragraph {
+            font-size: 13px;
+            font-weight: 300;
+            margin: 0 0 20px 0;
+        }
+        .btn {
+            border-radius: 30px;
+            font-size: 11px;
+            padding: 0 20px;
+            line-height: 30px;
+        }
+    }
+}

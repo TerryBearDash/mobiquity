@@ -1,0 +1,31 @@
+<div class="bubble-container">
+    <a class="btn btn-outline-dark mb-4" role="button" [routerLink]="['/category', year]">
+        <svg class="bi bi-arrow-left me-4" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"></path>
+        </svg>Back
+    </a>
+    <h1 class="display-3 mb-4"><span class="fw-bold">Oh yes! </span>What we found.</h1>
+    <ng-container *ngFor="let c of results">
+        <div class="result-card">
+            <div class="result-card-overlay"></div>
+            <div class="result-card-content">
+                <ng-template [ngIf]="category === 'constructors'">
+                    <h1 class="result-card-content-title">{{c.name}}</h1>
+                    <p class="result-card-content-paragraph">{{c.nationality}}</p>
+                </ng-template>
+                <ng-template [ngIf]="category === 'circuits'">
+                    <h1 class="result-card-content-title">{{c.circuitName}}</h1>
+                </ng-template>
+                <ng-template [ngIf]="category === 'results'">
+                    <h1 class="result-card-content-title">{{c.raceName}}</h1>
+                    <p class="result-card-content-paragraph">Round {{c.round}}</p>
+                </ng-template>
+                <ng-template [ngIf]="category === 'drivers'">
+                    <h1 class="result-card-content-title">{{c.givenName}} {{c.familyName}}</h1>
+                    <p class="result-card-content-paragraph">{{c.nationality}}</p>
+                </ng-template>
+                <a href="{{c.url}}" target="_blank" class="btn btn-outline-light btn-sm" type="button">View Me</a>
+            </div>
+        </div>
+    </ng-container>
+</div>

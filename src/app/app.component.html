@@ -1,0 +1,6 @@
+<div class="al-main-container" [ngClass]="{'light' : ui_mode, 'dark': !ui_mode}">
+    <div class="container">
+        <app-intro (mode)="setUIMode($event)"></app-intro>
+        <router-outlet></router-outlet>
+    </div>
+</div>

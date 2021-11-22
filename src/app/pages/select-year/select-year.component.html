@@ -1,0 +1,6 @@
+<div class="bubble-container">
+    <h1 class="display-3 mb-4"><span class="fw-bold">Let's begin. </span>Select a year.</h1>
+    <ng-container *ngFor="let f of results">
+        <a class="bubble-link" [routerLink]="['/category', f['season']]">{{f['season']}}</a>
+    </ng-container>
+</div>
